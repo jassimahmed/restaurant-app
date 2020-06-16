@@ -1,0 +1,542 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);* {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#welcome {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+#welcome .welcome-menu {
+  background: white;
+  padding: 12%;
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome .welcome-menu .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18%;
+}
+
+#welcome .welcome-menu .logo img {
+  width: 8vw;
+  max-width: 250px;
+}
+
+#welcome .welcome-menu .menu {
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .menu ul.links li {
+  display: block;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+#welcome .welcome-menu .menu ul.links li a {
+  font-size: 1.1rem;
+  color: #10613f;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+#welcome .welcome-menu .menu ul.links li a:hover {
+  color: #16d67a;
+}
+
+#welcome .welcome-menu .bottom {
+  margin-top: auto;
+}
+
+#welcome .welcome-menu .location {
+  margin-top: auto;
+}
+
+#welcome .welcome-menu .location .address {
+  color: black;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+#welcome .welcome-menu .location .phone-number {
+  margin-bottom: 0.2rem;
+}
+
+#welcome .welcome-menu .location .phone-number a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #10613f;
+}
+
+#welcome .welcome-menu .delivery-options {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#welcome .welcome-menu .social-icons {
+  display: flex;
+}
+
+#welcome .welcome-menu .social-icons .cdn-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #16d67a;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: color 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+#welcome .welcome-menu .social-icons .cdn-icons:hover {
+  color: #10613f;
+}
+
+#welcome .welcome-menu .social-icons .cdn-icons:before {
+  content: "";
+  padding-top: 100%;
+}
+
+#welcome .welcome-jumbo {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f64710;
+  background: radial-gradient(circle, #f64710 0%, #9a4127 100%);
+  overflow: hidden;
+  padding: 100px;
+}
+
+#welcome .welcome-jumbo .welcome-message {
+  width: 100%;
+  padding-top: 5%;
+  padding-left: 4%;
+}
+
+#welcome .welcome-jumbo .status {
+  display: inline-block;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16d67a;
+  background: black;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#welcome .welcome-jumbo h1 {
+  font-size: 4rem;
+  font-weight: 1000;
+  align-self: flex-start;
+  margin-bottom: 100px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+#welcome .welcome-jumbo .burger-fries {
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation: moveUpandDown 1s linear infinite;
+          animation: moveUpandDown 1s linear infinite;
+  position: relative;
+}
+
+#information {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100vh;
+}
+
+#information .restaurant-image {
+  overflow: hidden;
+}
+
+#information .restaurant-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
+
+#information .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4vh 5vw;
+}
+
+#information .info h2 span {
+  color: #16d67a;
+}
+
+#information .info .paragraph {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+#information .info .paragraph p {
+  font-size: 1.3vw;
+}
+
+#information .info .about-link {
+  font-size: 1.8vw;
+  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+#information .info .about-link .span {
+  margin-right: 1vw;
+}
+
+#information .info .about-link .circle-right {
+  margin-left: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.2vw;
+  width: 2.2vw;
+  border-radius: 50%;
+  background: red;
+}
+
+#information .info .about-link .circle-right .fa-chevron-right {
+  color: white;
+  font-size: 1.1vw;
+}
+
+#food-preview {
+  background: #fbfbfb;
+  padding: 9vw 9vw 5vw 9vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#food-preview h2 {
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+#food-preview .button-rounded {
+  font-size: 1.4vw;
+  background: red;
+  color: white;
+  display: inline-block;
+  padding: 1.4vw;
+  border-radius: 2.1vw;
+  margin-bottom: 2vw;
+  text-transform: uppercase;
+}
+
+#food-preview .container {
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+}
+
+#food-preview .container .left-btn,
+#food-preview .container .right-btn {
+  background: #16d67a;
+  color: white;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#food-preview .container .left-btn {
+  left: -50px;
+}
+
+#food-preview .container .right-btn {
+  right: -50px;
+}
+
+#food-preview .food-slider {
+  background: #10613f;
+  width: 100%;
+  max-width: 1400px;
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#food-preview .food-slider .sliding-system {
+  white-space: nowrap;
+}
+
+#food-preview .food-slider .slide {
+  width: 20%;
+  position: relative;
+  height: 500px;
+  cursor: pointer;
+  display: inline-block;
+  white-space: normal;
+}
+
+#food-preview .food-slider .slide:hover .background {
+  background: #727373;
+  z-index: 2;
+  transform: translate3d(0, 5vw, 0);
+}
+
+#food-preview .food-slider .slide:hover .food-title {
+  z-index: 2;
+  color: white;
+}
+
+#food-preview .food-slider .slide:hover .food-description {
+  z-index: 2;
+  color: white;
+}
+
+#food-preview .food-slider .slide .background {
+  background: #e7e7e7;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: 0;
+  z-index: 1;
+  position: absolute;
+  transition: transform 0.2s ease-in-out;
+}
+
+#food-preview .food-slider .slide .content {
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#food-preview .food-slider .slide .content .food-title {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 2vw;
+}
+
+#food-preview .food-slider .slide .content .food-description {
+  font-size: 0.8rem;
+  font-weight: 100;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+#food-preview .food-slider .slide .food-image {
+  background: pink;
+}
+
+#food-preview .food-slider .slide .food-image img {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 4vw;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+body {
+  line-height: 1;
+  background: white;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
