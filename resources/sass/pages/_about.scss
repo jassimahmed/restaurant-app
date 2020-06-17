@@ -1,0 +1,29 @@
+#about-page{
+	padding: 5vw;
+
+	h1{
+		font-size: 4rem;
+		font-weight: 700;
+	}
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 0px) and (max-width: 767px) {
+	#about-page{
+		padding: 20px;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	#about-page{
+		padding: 20px;
+	}
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }

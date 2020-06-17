@@ -139,42 +139,119 @@ table {
   border-spacing: 0;
 }
 
-#welcome {
+.welcome-jumbo {
+  transform: translate3d(300px, 0, 0);
+  max-width: calc(100vw - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f64710;
+  background: radial-gradient(circle, #f64710 0%, #9a4127 100%);
+  overflow: hidden;
+  padding: 100px;
+}
+
+.welcome-jumbo .welcome-message {
+  width: 100%;
+  padding-top: 5%;
+  padding-left: 4%;
+}
+
+.welcome-jumbo .status {
+  display: inline-block;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16d67a;
+  background: black;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.welcome-jumbo h1 {
+  font-size: 4rem;
+  font-weight: 1000;
+  align-self: flex-start;
+  margin-bottom: 100px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.welcome-jumbo .burger-fries {
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation: moveUpandDown 1s linear infinite;
+          animation: moveUpandDown 1s linear infinite;
+  position: relative;
+}
+
+#about-page {
+  padding: 5vw;
+}
+
+#about-page h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #about-page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #about-page {
+    padding: 20px;
+  }
+}
+
+body {
+  line-height: 1;
+  background: white;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+#app-layout {
   display: grid;
-  grid-template-columns: 20% 1fr;
   width: 100%;
   height: 100vh;
 }
 
-#welcome .welcome-menu {
+#app-layout .side-menu {
+  position: absolute;
+  height: 100vh;
+  width: 300px;
   background: white;
-  padding: 12%;
-  display: flex;
+  padding: 35px;
   flex-direction: column;
 }
 
-#welcome .welcome-menu .logo {
+#app-layout .side-menu .logo {
   display: flex;
   justify-content: center;
   margin-bottom: 18%;
 }
 
-#welcome .welcome-menu .logo img {
+#app-layout .side-menu .logo img {
   width: 8vw;
   max-width: 250px;
 }
 
-#welcome .welcome-menu .menu {
+#app-layout .side-menu .menu {
   margin-bottom: 50px;
 }
 
-#welcome .welcome-menu .menu ul.links li {
+#app-layout .side-menu .menu ul.links li {
   display: block;
   margin-bottom: 1.4rem;
   text-align: center;
 }
 
-#welcome .welcome-menu .menu ul.links li a {
+#app-layout .side-menu .menu ul.links li a {
   font-size: 1.1rem;
   color: #10613f;
   font-weight: 700;
@@ -183,47 +260,47 @@ table {
   cursor: pointer;
 }
 
-#welcome .welcome-menu .menu ul.links li a:hover {
+#app-layout .side-menu .menu ul.links li a:hover {
   color: #16d67a;
 }
 
-#welcome .welcome-menu .bottom {
+#app-layout .side-menu .bottom {
   margin-top: auto;
 }
 
-#welcome .welcome-menu .location {
+#app-layout .side-menu .location {
   margin-top: auto;
 }
 
-#welcome .welcome-menu .location .address {
+#app-layout .side-menu .location .address {
   color: black;
   margin-bottom: 20px;
   line-height: 1.7;
   font-weight: 300;
 }
 
-#welcome .welcome-menu .location .phone-number {
+#app-layout .side-menu .location .phone-number {
   margin-bottom: 0.2rem;
 }
 
-#welcome .welcome-menu .location .phone-number a {
+#app-layout .side-menu .location .phone-number a {
   font-size: 1.8rem;
   font-weight: 700;
   text-decoration: none;
   color: #10613f;
 }
 
-#welcome .welcome-menu .delivery-options {
+#app-layout .side-menu .delivery-options {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-#welcome .welcome-menu .social-icons {
+#app-layout .side-menu .social-icons {
   display: flex;
 }
 
-#welcome .welcome-menu .social-icons .cdn-icons {
+#app-layout .side-menu .social-icons .cdn-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,61 +316,20 @@ table {
   cursor: pointer;
 }
 
-#welcome .welcome-menu .social-icons .cdn-icons:hover {
+#app-layout .side-menu .social-icons .cdn-icons:hover {
   color: #10613f;
 }
 
-#welcome .welcome-menu .social-icons .cdn-icons:before {
+#app-layout .side-menu .social-icons .cdn-icons:before {
   content: "";
   padding-top: 100%;
 }
 
-#welcome .welcome-jumbo {
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#app-layout #content-section {
+  transform: translate3d(300px, 0, 0);
+  max-width: calc(100vw - 300px);
   background: #f64710;
   background: radial-gradient(circle, #f64710 0%, #9a4127 100%);
-  overflow: hidden;
-  padding: 100px;
-}
-
-#welcome .welcome-jumbo .welcome-message {
-  width: 100%;
-  padding-top: 5%;
-  padding-left: 4%;
-}
-
-#welcome .welcome-jumbo .status {
-  display: inline-block;
-  padding: 10px;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #16d67a;
-  background: black;
-  border-radius: 5px;
-  align-self: flex-start;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-#welcome .welcome-jumbo h1 {
-  font-size: 4rem;
-  font-weight: 1000;
-  align-self: flex-start;
-  margin-bottom: 100px;
-  color: white;
-  letter-spacing: 2px;
-}
-
-#welcome .welcome-jumbo .burger-fries {
-  width: 100%;
-  max-width: 100%;
-  -webkit-animation: moveUpandDown 1s linear infinite;
-          animation: moveUpandDown 1s linear infinite;
-  position: relative;
 }
 
 #information {
@@ -511,32 +547,119 @@ h2 {
   margin-bottom: 20px;
 }
 
-body {
-  line-height: 1;
-  background: white;
-  font-family: "Hind Siliguri", sans-serif;
+@media (min-width: 0px) and (max-width: 767px) {
+  #app-layout .side-menu {
+    display: none;
+  }
+
+  #app-layout .welcome-jumbo,
+  #app-layout #content-section {
+    padding: 10px;
+    width: 100%;
+    max-width: 100vw;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #information {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto;
+  }
+
+  #information .info {
+    padding: 40px;
+  }
+
+  #information .info h2 {
+    font-size: 2rem;
+  }
+
+  #information .info .paragraph {
+    grid-template-columns: 1fr;
+  }
+
+  #information .info .paragraph p {
+    font-size: 1.5rem;
+  }
+
+  #food-preview {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+  }
+
+  #food-preview .container .left-btn {
+    left: -30px;
+  }
+
+  #food-preview .container .right-btn {
+    right: -30px;
+  }
+
+  #food-preview h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  #food-preview .food-slider .slide {
+    width: 100%;
+  }
 }
 
-ol,
-ul {
-  list-style: none;
-}
+@media (min-width: 768px) {
+  #app-layout .side-menu {
+    transform: translate3d(-300px, 0, 0);
+  }
 
-blockquote,
-q {
-  quotes: none;
-}
+  #app-layout .welcome-jumbo,
+  #app-layout #content-section {
+    padding: 10px;
+    width: 100%;
+    max-width: 100vw;
+    transform: translate3d(0, 0, 0);
+  }
 
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-  content: none;
-}
+  #information {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px auto;
+  }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  #information .info {
+    padding: 40px;
+  }
+
+  #information .info h2 {
+    font-size: 2rem;
+  }
+
+  #information .info .paragraph {
+    grid-template-columns: 50% 50%;
+  }
+
+  #information .info .paragraph p {
+    font-size: 1.5rem;
+  }
+
+  #food-preview {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+  }
+
+  #food-preview .container .left-btn {
+    left: -30px;
+  }
+
+  #food-preview .container .right-btn {
+    right: -30px;
+  }
+
+  #food-preview h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  #food-preview .food-slider .slide {
+    width: 50%;
+  }
 }
 

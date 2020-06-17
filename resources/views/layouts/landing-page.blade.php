@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-      <section id="welcome">
+      <section id="app-layout">
         @include('includes.side-menu')
         <div class="welcome-jumbo">
           <div class="welcome-message">
