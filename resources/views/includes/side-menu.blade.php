@@ -16,13 +16,13 @@
 			<a href="/menu">Complete Menu</a>
 		</li>
 		<li>
-			<a href="/waitlist">Waitlist</a>
+			<a href="/reservations">Waitlist</a>
 		</li>
 		<li>
 			<a href="/offers">Offers</a>
 		</li>
 		<li>
-			<a href="/giftcards">Giftcards</a>
+			<a href="/contact">Contact</a>
 		</li>
 	</ul>
 </div>
