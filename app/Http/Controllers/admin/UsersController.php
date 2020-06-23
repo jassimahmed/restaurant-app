@@ -16,7 +16,10 @@ class UsersController extends Controller
         $this->middleware('auth');
     }
 	public function index(){
-		return view('admin/users/all');
+		$users = User::paginate(10);
+		return view('admin/users/all', [
+			'users' => $users
+		]);
 	}
 	public function create(){
 		$roles = Role::all();
@@ -34,7 +37,37 @@ class UsersController extends Controller
 		$user->roles()->attach(request('role_id'));
 		return redirect('/admin/users');
 	}
-	public function edit(){
-		return view('admin/users/edit');
+	public function edit($id){
+		$user = User::find($id);
+		$roles = Role::all();
+		return view('admin/users/edit', [
+			'user' => $user,
+			'roles' => $roles
+		]);
+	}
+
+	public function update($id){
+		request()->validate([
+			'fname' => ['required', 'string', 'max:255'],
+            'lname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+			'role_id' => ['required'],
+		]);
+		$user = User::find($id);
+		$user->fname = request('fname');
+		$user->lname = request('lname');
+		$user->email = request('email');
+		$user->password = Hash::make(request('password'));
+		$user->save();
+		$user->roles()->syncWithoutDetaching([request('role_id')]);
+
+		return redirect('/admin/users');
+	}
+
+	public function delete($id){
+		$user = User::find($id);
+		$user->delete();
+		return redirect('/admin/users');
 	}
 }
