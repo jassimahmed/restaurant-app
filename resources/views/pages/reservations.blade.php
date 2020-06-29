@@ -6,7 +6,8 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h1> Get on the list. </h1>
-					<form>
+					<form method="POST" action="/reservations">
+						@csrf
 						<div class="form-group">
 							<label for="phoneinput">First Name</label>
 							<input type="text" class="form-control" name="fname" id="firstnameinput" placeholder="Joe">

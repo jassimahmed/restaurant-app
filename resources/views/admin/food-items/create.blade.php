@@ -35,32 +35,74 @@
                             <div class="card">
                                 <h5 class="card-header">Create a new item</h5>
                                 <div class="card-body">
-                                    <form action="#" id="basicform" data-parsley-validate="" novalidate="">
-                                        <div class="form-group">
-                                            <label for="inputItem">Item Name</label>
-                                            <input id="inputItem" type="text" name="title" data-parsley-trigger="change" required="" placeholder="Enter item name" autocomplete="off" class="form-control">
-                                        </div>
-																				<div class="form-group">
-                                            <label for="inputItem">Price</label>
-                                            <input id="inputItem" type="text" name="price" data-parsley-trigger="change" required="" placeholder="Enter item price" autocomplete="off" class="form-control">
-                                        </div>
-																				<div class="form-group">
-                                            <label for="inputItemImageUrl">Item Image URL</label>
-                                            <input id="inputItemImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://billys.com/burgers.jpeg" autocomplete="off" class="form-control">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                                <label class="be-checkbox custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"><span class="custom-control-label">Remember me</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-6 pl-0">
-                                                <p class="text-right">
-                                                    <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </form>
+									<form method="POST" action="/admin/food-items">
+										@csrf
+										<div class="form-group">
+											<label for="inputtitle">Item Name</label>
+											<input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="" placeholder="Enter item name" required autocomplete="title" autofocus >
+
+												@error('title')
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $message }}</strong>
+													</span>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label for="inputitemcategory">Item category</label>
+												<select name="category_id" class="form-control" id="inputitemcategory">
+													@foreach ($categories as $category)
+														<option value="{{$category->id}}">
+															{{$category->title}}
+														</option>
+													@endforeach
+												</select>
+											</div>
+											<div class="form-group">
+												<label for="inputdescription">Description</label>
+												<textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" placeholder="Write a description{{old('description')}}" required autofocus ></textarea>
+
+													@error('description')
+														<span class="invalid-feedback" role="alert">
+															<strong>{{ $message }}</strong>
+														</span>
+													@enderror
+												</div>
+												<div class="form-group">
+													<label for="inputimageurl">Image URL</label>
+													<input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" placeholder="Add image url" required autofocus>
+
+														@error('image_url')
+															<span class="invalid-feedback" role="alert">
+																<strong>{{ $message }}</strong>
+															</span>
+														@enderror
+													</div>
+													<div class="form-group">
+														<label for="inpuprice">Price</label>
+														<input id="inputprice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" placeholder="Enter price" required autofocus>
+
+															@error('price')
+																<span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+																</span>
+															@enderror
+														</div>
+														<div class="row">
+															<div class="col-sm-12 pl-0">
+																<p class="text-right">
+																	<button type="submit" class="btn btn-space btn-primary">Submit</button>
+																</p>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+										<!-- ============================================================== -->
+										<!-- end basic form -->
+										<!-- ============================================================== -->
+
+									</div>
                                 </div>
                             </div>
                         </div>
