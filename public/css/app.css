@@ -279,6 +279,27 @@ table {
   }
 }
 
+#contact-page {
+  padding: 5vw;
+}
+
+#contact-page h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #contact-page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact-page {
+    padding: 20px;
+  }
+}
+
 #waitlist-page {
   padding: 5vw;
 }
@@ -609,6 +630,7 @@ body {
 
 #food-preview .food-slider .sliding-system {
   white-space: nowrap;
+  transition: 0.3s ease-in-out;
 }
 
 #food-preview .food-slider .slide {
@@ -719,16 +741,18 @@ h2 {
 
   #food-preview {
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     padding: 30px;
   }
 
   #food-preview .container .left-btn {
     left: -30px;
+    display: none;
   }
 
   #food-preview .container .right-btn {
     right: -30px;
+    display: none;
   }
 
   #food-preview h2 {
@@ -738,6 +762,11 @@ h2 {
 
   #food-preview .food-slider .slide {
     width: 100%;
+  }
+
+  #food-preview .food-slider .sliding-system {
+    white-space: normal;
+    transform: translate3d(0%, 0, 0);
   }
 }
 
