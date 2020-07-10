@@ -4,6 +4,7 @@
         @include('includes.meta-tags')
     </head>
     <body>
+        @include('includes.header')
       <section id="app-layout">
         @include('includes.side-menu')
         <section id="content-section">

@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.landing-page')
+@extends('layouts.landing-page-with-sidebar')
 
 @section('title')
 {{$settings['general']->site_title}} World's Greatest Burger in the History of Humanity

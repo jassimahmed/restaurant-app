@@ -1,7 +1,8 @@
 
 .welcome-jumbo{
-	transform: translate3d(300px, 0, 0);
-	max-width: calc(100vw - 300px);
+	//transform: translate3d(300px, 0, 0);
+	//max-width: calc(100vw - 300px);
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -9,7 +10,7 @@
 	background: rgb(246,71,16);
 	background: radial-gradient(circle, rgba(246,71,16,1) 0%, rgba(154,65,39,1) 100%);
 	overflow: hidden;
-	padding: 100px;
+	//padding: 100px;
 
 	.welcome-message{
 		width: 100%;

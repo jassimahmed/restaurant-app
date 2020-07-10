@@ -4,6 +4,7 @@
         @include('includes.meta-tags')
     </head>
     <body>
+        @include('includes.header')
       <section id="app-layout">
         @include('includes.side-menu')
         <div class="welcome-jumbo">
@@ -17,7 +18,7 @@
       @yield('content')
     </body>
 
-    
+
     <script src="/assets/vendor/jquery/jquery-3.3.1.min.js">
     </script>
 
