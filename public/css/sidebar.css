@@ -53,15 +53,20 @@ a:focus {
 .wrapper {
     display: flex;
     width: 100%;
-    align-items: stretch;
+    align-items: space-between;
 }
 
 #sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #e0a6a6;
     color: #fff;
     transition: all 0.3s;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 #sidebar.active {
