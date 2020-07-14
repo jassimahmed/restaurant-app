@@ -16,13 +16,13 @@
     		</ol>
     		<div class="carousel-inner h-100">
     			<div class="carousel-item active">
-    				<img src="/img/chef-prep.jpg" class="d-block w-100 h-100" alt="...">
+    				<img src="/img/chef-prep.jpg"  alt="...">
     			</div>
     			<div class="carousel-item">
-    				<img src="/img/resto-interior.jpg" class="d-block w-100 h-100" alt="...">
+    				<img src="/img/resto-interior.jpg"  alt="...">
     			</div>
     			<div class="carousel-item">
-    				<img src="/img/bowls.jpg" class="d-block w-100 h-100" alt="...">
+    				<img src="/img/bowls.jpg"  alt="...">
     			</div>
     		</div>
     	</div>

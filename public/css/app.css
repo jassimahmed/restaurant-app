@@ -379,16 +379,16 @@ table {
 
 #bs_carousel .carousel-item {
   height: 100%;
-  overflow: hidden;
-  position: relative;
   background-color: black;
 }
 
 #bs_carousel .carousel-item img {
-  height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 * {
