@@ -6,33 +6,33 @@
 			</a>
 		</div>
 		<ul class="list-unstyled components">
-			<p>{{$settings['general']->site_title}}</p>
+			<p class="site_title text-center mb-3 mt-1">{{$settings['general']->site_title}}</p>
 			{{-- <li class="active"> --}}
-			<li>
+			<li class="mb-2">
 				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>
 				<ul class="collapse list-unstyled" id="homeSubmenu">
 					@foreach ($categories as $category)
 						<li>
-							<a href="/menu/{{$category->title}}">{{$category->title}}</a>
+							<a class="-cat" href="/menu/{{$category->title}}">{{$category->title}}</a>
 						</li>
 					@endforeach
 				</ul>
 			</li>
-			<li>
+			<li class="mb-2">
 				<a href="/reservations">Waitlist</a>
 			</li>
-			<li>
+			<li class="mb-2">
 				<a href="/offers">Offers</a>
 			</li>
-			<li>
+			<li class="mb-2">
 				<a href="/about">More</a>
 			</li>
-			<li>
+			<li class="mb-2">
 				<a href="/contact">Contact</a>
 			</li>
 		</ul>
 	</div>
-	<div class="bottom container-fluid p-2 d-none d-sm-block">
+	{{-- <div class="bottom container-fluid p-2 d-none d-sm-block">
 		<div class="location col-12 p-0">
 			<div class="address">
 				{{$settings['general']->address_1}} {{$settings['general']->address_2}} <br>
@@ -59,5 +59,5 @@
 				<i class="fab fa-youtube" aria-hidden="true"></i>
 			</a>
 		</div>
-	</div>
+	</div> --}}
 </nav>

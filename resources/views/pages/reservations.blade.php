@@ -9,7 +9,11 @@ Reservations - {{$settings['general']->site_title}}
 		<div class="content-box">
 			<div class="row">
 				<div class="col-md-6">
-					<h1> Get on the list. </h1>
+					<h1 class="mb-4"> Join the waitlist for your friends and family. </h1>
+					<h2 class="mb-2">How does it work?</h2>
+					<p class="mb-4">
+						Since our restaurant is at full-booking capacity most of the year, our customers get to book space early on. Once you have submitted your request, we will put you in line and contact you immediately of our availabiliy. You can cancel your order anytime by contacting us!
+					</p>
 					<form method="POST" action="/reservations">
 						@csrf
 						<div class="form-group">
@@ -55,7 +59,7 @@ Reservations - {{$settings['general']->site_title}}
 				</div>
 				<div class="col-md-6">
 					<p>
-						Here comes the instruction for the dumb customers on our page. If you do happen to read this, you are not necessarily dumb, but if you are our client then you probably are.
+						There are only limited time slots available at the moment. We will update our options as we have more openings. Join <a href="/offers" class="exclusive-email"> the exclusive email list </a> to recieve our offers first.
 					</p>
 				</div>
 			</div>

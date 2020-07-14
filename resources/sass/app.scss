@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
-@import "home";
 @import "menu/index";
 @import "menu/single-menu";
 @import "pages/about";
@@ -23,6 +22,15 @@ body {
   line-height: 1;
   background: white;
   font-family: 'Hind Siliguri', sans-serif;
+  h1{
+      font-size: 2rem;
+      font-weight: 700;
+  }
+  h2{
+  	font-size: 1.3rem;
+  	font-weight: 700;
+  	//margin-bottom: 20px;
+  }
 }
 #welcome{
     .content{
@@ -33,9 +41,6 @@ body {
                 height: 100%;
                 object-fit: cover;
             }
-        }
-        h2{
-            font-size: 2rem;
         }
         .find-more{
             .circle-right{
@@ -50,11 +55,19 @@ body {
         min-height: 100vh;
     }
 }
-h2{
-	font-size: 4vw;
-	font-weight: 700;
-	margin-bottom: 20px;
+
+#sidebar{
+    .site_title{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .list-unstyled li{
+        .-cat{
+            text-transform: capitalize;
+        }
+    }
 }
+
 
 // Small
 @media (min-width: 0px) and (max-width: 767px) {
