@@ -364,127 +364,55 @@ table {
   }
 }
 
+#bs_carousel .carousel-indicators {
+  color: black;
+}
+
+#bs_carousel .carousel-indicators li {
+  color: black;
+  background-color: black;
+  border: thin solid white;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+#bs_carousel .carousel-item {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+}
+
+#bs_carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
   line-height: 1;
   background: white;
   font-family: "Hind Siliguri", sans-serif;
 }
 
-#app-layout {
-  display: grid;
-  width: 100%;
+#welcome {
   height: 100vh;
 }
 
-#app-layout .side-menu {
-  position: absolute;
-  height: 100vh;
-  width: 300px;
-  background: white;
-  padding: 35px;
-  flex-direction: column;
-}
-
-#app-layout .side-menu .logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 18%;
-}
-
-#app-layout .side-menu .logo img {
-  width: 8vw;
-  max-width: 250px;
-}
-
-#app-layout .side-menu .menu {
-  margin-bottom: 50px;
-}
-
-#app-layout .side-menu .menu ul.links li {
-  display: block;
-  margin-bottom: 1.4rem;
-  text-align: center;
-}
-
-#app-layout .side-menu .menu ul.links li a {
-  font-size: 1.1rem;
-  color: #10613f;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.1s ease-in-out;
-  cursor: pointer;
-}
-
-#app-layout .side-menu .menu ul.links li a:hover {
-  color: #16d67a;
-}
-
-#app-layout .side-menu .bottom {
-  margin-top: auto;
-}
-
-#app-layout .side-menu .location {
-  margin-top: auto;
-}
-
-#app-layout .side-menu .location .address {
-  color: black;
-  margin-bottom: 20px;
-  line-height: 1.7;
-  font-weight: 300;
-}
-
-#app-layout .side-menu .location .phone-number {
-  margin-bottom: 0.2rem;
-}
-
-#app-layout .side-menu .location .phone-number a {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #10613f;
-}
-
-#app-layout .side-menu .delivery-options {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#app-layout .side-menu .social-icons {
-  display: flex;
-}
-
-#app-layout .side-menu .social-icons .cdn-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #16d67a;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: white;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  margin-right: 10px;
-  transition: color 0.1s ease-in-out;
-  cursor: pointer;
-}
-
-#app-layout .side-menu .social-icons .cdn-icons:hover {
-  color: #10613f;
-}
-
-#app-layout .side-menu .social-icons .cdn-icons:before {
-  content: "";
-  padding-top: 100%;
-}
-
-#app-layout #content-section {
-  transform: translate3d(300px, 0, 0);
-  max-width: calc(100vw - 300px);
-  background: #f64710;
-  background: radial-gradient(circle, #f64710 0%, #9a4127 100%);
+#page-welcome .page-content {
+  min-height: 100vh;
 }
 
 #information {
@@ -533,7 +461,7 @@ body {
 }
 
 #information .info .about-link {
-  font-size: 1.8vw;
+  font-size: 18px;
   display: inline;
   display: flex;
   justify-content: center;
@@ -548,19 +476,13 @@ body {
 }
 
 #information .info .about-link .circle-right {
-  margin-left: 1vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2.2vw;
-  width: 2.2vw;
-  border-radius: 50%;
-  background: red;
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  color: red;
 }
 
-#information .info .about-link .circle-right .fa-chevron-right {
-  color: white;
-  font-size: 1.1vw;
+#information .info .about-link .circle-right i {
+  font-size: 1rem;
 }
 
 #food-preview {
@@ -703,6 +625,31 @@ h2 {
   margin-bottom: 20px;
 }
 
+footer {
+  border-top: thin solid #d6d6d6;
+  padding: 30px 0 30px 0;
+}
+
+footer p {
+  font-size: 1rem;
+  color: black;
+}
+
+footer p a {
+  font-weight: bolder;
+}
+
+footer p a:hover {
+  color: #50d918;
+}
+
+footer .copyright img {
+  margin-right: 0.25rem;
+  width: 1.75rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   #app-layout .side-menu {
     display: none;
@@ -716,15 +663,15 @@ h2 {
 
   #information {
     grid-template-columns: 1fr;
-    grid-template-rows: 200px auto;
+    grid-template-rows: 240px auto;
   }
 
   #information .info {
-    padding: 40px;
+    padding: 35px 15px 15px 15px;
   }
 
   #information .info h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   #information .info .paragraph {
@@ -732,7 +679,7 @@ h2 {
   }
 
   #information .info .paragraph p {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
 
   #food-preview {
@@ -783,7 +730,7 @@ h2 {
   }
 
   #information .info h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   #information .info .paragraph {
@@ -791,7 +738,7 @@ h2 {
   }
 
   #information .info .paragraph p {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
 
   #food-preview {

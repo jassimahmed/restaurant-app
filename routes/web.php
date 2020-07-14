@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\GeneralSetting;
 use App\SocialSetting;
 use App\SeoSetting;
+use App\FoodCategory;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,10 +86,12 @@ View::composer(['home', 'pages/about', 'pages/contact', 'pages/giftcards', 'page
 	$gs = GeneralSetting::find(1);
 	$ss = SocialSetting::find(1);
 	$seos = SeoSetting::find(1);
+	$categories = FoodCategory::all();
 
 	$view->with('settings', [
 		'general' => $gs,
 		'social' => $ss,
 		'seo' => $seos,
 	]);
+	$view->with('categories', $categories);
 });

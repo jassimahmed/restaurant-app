@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
 @section('title')
 Reservations - {{$settings['general']->site_title}}
 @endsection
 
 @section('content')
-	<div id="waitlist-page">
+	<div id="waitlist-page" class="col-12">
 		<div class="content-box">
 			<div class="row">
 				<div class="col-md-6">

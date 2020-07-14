@@ -65,7 +65,7 @@ a:focus {
     background: #e0a6a6;
     color: #fff;
     transition: all 0.3s;
-    max-height: 100vh;
+    /* // max-height: 100vh; */
     overflow: hidden;
 }
 
@@ -162,6 +162,10 @@ a.article:hover {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+    body.active {
+        max-height: 100vh;
+        overflow: hidden;
+    }
     #sidebar {
         margin-left: -250px;
     }

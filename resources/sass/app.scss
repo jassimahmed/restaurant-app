@@ -7,143 +7,29 @@
 @import "pages/contact";
 @import "pages/waitlist";
 @import "pages/offers";
+@import "carousel";
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+}
 
 body {
   line-height: 1;
   background: white;
   font-family: 'Hind Siliguri', sans-serif;
 }
-
-#app-layout{
-	display: grid;
-	//grid-template-columns: 20% 1fr;
-	width: 100%;
-	height: 100vh;
-
-	.side-menu{
-    position: absolute;
+#welcome{
     height: 100vh;
-    width: 300px;
-		background: white;
-		padding: 35px;
-		//display: flex;
-		flex-direction: column;
-		.logo{
-			//background: yellow;
-			display: flex;
-			justify-content: center;
-			margin-bottom: 18%;
-			img {
-				width: 8vw;
-				max-width: 250px;
-			}
-		}
-
-		.menu{
-			margin-bottom: 50px;
-			// .menu-title{
-			// 	font-family: 'Hind Siliguri', sans-serif;
-			// 	text-transform: uppercase;
-			// 	//color: rgb(222, 39, 16);
-			// 	//font-weight: 1000;
-			// 	font-size: 1.2rem;
-			// 	//border-bottom: 1px solid #353036;
-			// 	//padding-bottom: 20px;
-			// 	//margin-bottom: 20px;
-			// }
-			ul.links {
-				li{
-					display: block;
-					margin-bottom: 1.4rem;
-					text-align: center;
-					a{
-						 font-size: 1.1rem;
-						 color: #10613f;
-						 font-weight: 700;
-						 text-decoration: none;
-						 transition: color .1s ease-in-out;
-						 &:hover{
-						 	color: #16d67a;
-						 }
-						 cursor: pointer;
-					}
-				}
-			}
-		}
-
-		.bottom{
-			margin-top: auto;
-		}
-
-		.location{
-			margin-top: auto;
-			 // align-self: center;
-			 // position: absolute;
-			 // bottom: 100px;
-			.address{
-				color: black;
-				margin-bottom: 20px;
-				line-height: 1.7;
-				font-weight: 300;
-			}
-			.phone-number{
-				margin-bottom: 0.2rem;
-				a{
-					font-size: 1.8rem;
-					font-weight: 700;
-					text-decoration: none;
-					color: #10613f;
-				}
-			}
-		}
-		.delivery-options{
-			margin-bottom: 1rem;
-			font-size: 1.2rem;
-			font-weight: bold;
-		}
-
-		.social-icons{
-			display: flex;
-			//background: yellow;
-			//position: absolute;
-			//bottom: 1.5rem;
-			//overflow: auto;
-			.cdn-icons{
-				//flex: 1 1;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background: #16d67a;
-				font-size: 0.9rem;
-				text-decoration: none;
-				color: white;
-				height: 2rem;
-				width: 2rem;
-				border-radius: 50%;
-				margin-right: 10px;
-				//overflow: auto;
-				transition: color .1s ease-in-out;
-				&:hover{
-				 color: #10613f;
-				}
-				cursor: pointer;
-			}
-
-			.cdn-icons:before{
-				content: '';
-				padding-top: 100%;
-			}
-
-		}
-	}
-
-  #content-section{
-    transform: translate3d(300px, 0, 0);
-    max-width: calc(100vw - 300px);
-    background: rgb(246,71,16);
-    background: radial-gradient(circle, rgba(246,71,16,1) 0%, rgba(154,65,39,1) 100%);
-    //overflow: hidden;
-  }
+}
+#page-welcome {
+    .page-content {
+        min-height: 100vh;
+    }
 }
 
 #information{
@@ -187,7 +73,7 @@ body {
 		}
 
 		.about-link{
-			font-size: 1.8vw;
+			font-size: 18px;
 			display: inline;
 			display: flex;
 			justify-content: center;
@@ -199,18 +85,12 @@ body {
 				margin-right: 1vw;
 			}
 			.circle-right{
-				margin-left: 1vw;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 2.2vw;
-				width: 2.2vw;
-				border-radius: 50%;
-				background: red;
-				.fa-chevron-right{
-					color: white;
-					font-size: 1.1vw
-				}
+                font-size: 1.7rem;
+                margin-left: .5rem;
+                color: red;
+                i{
+                    font-size: 1rem;
+                }
 			}
 		}
 	}
@@ -356,6 +236,29 @@ h2{
 	margin-bottom: 20px;
 }
 
+footer {
+    border-top: thin solid #d6d6d6;
+    padding: 30px 0 30px 0;
+    p{
+        font-size: 1rem;
+        color: black;
+        a{
+            font-weight: bolder;
+        }
+        a:hover{
+            color: #50d918;
+        }
+    }
+    .copyright{
+        img{
+            margin-right: .25rem;
+            width: 1.75rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
 // Small devices
 @media (min-width: 0px) and (max-width: 767px) {
   #app-layout{
@@ -373,17 +276,19 @@ h2{
 
   #information{
     grid-template-columns: 1fr;
-    grid-template-rows: 200px auto;
-
+    grid-template-rows: 240px auto;
+    // .restaurant-image{
+    //     margin-top: 10
+    // }
     .info {
-      padding: 40px;
+      padding: 35px 15px 15px 15px;
       h2{
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
       .paragraph{
         grid-template-columns: 1fr;
         p{
-          font-size: 1.5rem;
+          font-size: 18px;
         }
       }
     }
@@ -438,12 +343,12 @@ h2{
     .info {
       padding: 40px;
       h2{
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
       .paragraph{
         grid-template-columns: 50% 50%;
         p{
-          font-size: 1.5rem;
+          font-size: 18px;
         }
       }
     }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
 @section('title')
 {{$food_item_name}} - {{$settings['general']->site_title}}

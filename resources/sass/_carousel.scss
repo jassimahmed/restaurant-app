@@ -1,0 +1,24 @@
+#bs_carousel{
+	.carousel-indicators{
+		color: black;
+		li{
+			color: black;
+			background-color: black;
+			border: thin solid white;
+			width: 10px;
+  			height: 10px;
+  			border-radius: 100%;
+		}
+	}
+	.carousel-item{
+		height: 100%;
+		overflow:hidden;
+    	position:relative;
+		background-color: black;
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}

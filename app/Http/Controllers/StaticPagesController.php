@@ -13,10 +13,7 @@ use App\FoodItems;
 class StaticPagesController extends Controller
 {
 	public function home(){
-		$categories = FoodCategory::all();
-		return view('home', [
-			'categories' => $categories
-		]);
+		return view('home');
 	}
 	public function about(){
 		return view('pages/about');

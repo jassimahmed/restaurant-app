@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
 @section('title')
 Contact - {{$settings['general']->site_title}}
 @endsection
 
 @section('content')
-	<div id="contact-page">
+	<div id="contact-page" class="col-12">
 		<div class="content-box">
 			<div class="row">
 				<div class="col-md-6">
