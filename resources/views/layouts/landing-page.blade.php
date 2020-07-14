@@ -7,19 +7,26 @@
 
 <body>
     <section id="welcome">
-        <div class="wrapper overflow-hidden h-100">
+        <div class="wrapper overflow-hidden h-md-100">
             @include('includes.sidebar')
             <div class="main-layout container-fluid d-flex flex-column">
                 {{-- Topbar --}}
                 @include('includes.topbar')
-                {{-- Content --}}
-                <div class="row flex-grow-1">
+                {{-- Carousel --}}
+                <div class="row flex-grow-1 ">
                     @yield('carousel')
                 </div>
+                {{-- Content --}}
+                <div class="row content">
+                    @yield('content')
+                </div>
+                {{-- Footer --}}
+                <footer class="container-fluid">
+                    @include('includes.footer')
+                </footer>
             </div>
         </div>
     </section>
-    @yield('content')
     @include('includes.bottom-scripts')
 </body>
 

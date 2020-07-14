@@ -13,3 +13,14 @@ $(document).ready(function () {
 	});
 });
 </script>
+{{-- Carousel swipe --}}
+<script>
+$(document).ready(function() {
+   $("#bs_carousel").swiperight(function() {
+      $(this).carousel('prev');
+    });
+   $("#bs_carousel").swipeleft(function() {
+      $(this).carousel('next');
+   });
+});
+</script>

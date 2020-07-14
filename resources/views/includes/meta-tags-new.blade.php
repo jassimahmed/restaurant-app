@@ -12,7 +12,6 @@
 {{-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> --}}
 <script src="https://kit.fontawesome.com/3cd501a181.js" crossorigin="anonymous"></script>
 
-
 <!-- Our Custom CSS -->
 <link rel="stylesheet" href="/css/app.css">
 <link rel="stylesheet" href="/css/sidebar.css">
