@@ -13,8 +13,8 @@ class GeneralSettingSeeder extends Seeder
     public function run()
     {
         DB::table('general_settings')->insert([
-            'site_title' => 'Billy\'s Burger',
-            'logo_img_url' => 'https://seeklogo.com/images/L/lucias-restaurant-terrace-bar-logo-997AA4FDEA-seeklogo.com.png',
+            'site_title' => "The Inn at Verdun",
+            'logo_img_url' => '/img/floral.png',
             'address_1' => '4094 rue Wellington, Verdun.',
             'address_2' => '',
             'city' => 'Montreal',

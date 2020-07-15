@@ -59,7 +59,7 @@ a:focus {
     justify-content: space-between;
     min-width: 250px;
     max-width: 250px;
-    background: #e0a6a6;
+    background: #9fb5a5; /* #a1a1a1; */
     color: #fff;
     transition: all 0.3s;
     /* // max-height: 100vh; */
@@ -80,8 +80,9 @@ a:focus {
     /* border-bottom: 1px solid #47748b; */
 }
 
+/* Title */
 #sidebar ul p {
-    color: #fff;
+    color: black;
     padding: 10px;
 }
 
@@ -92,15 +93,16 @@ a:focus {
     /* border-bottom: thin solid black; */
 }
 
+/* Mouse hover item */
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    color: #cb1f77;
+    background: #ECAE81; /* #cef54b; */
 }
-
+/* item selected */
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #861951;
 }
 
 a[data-toggle="collapse"] {
@@ -115,10 +117,11 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
+/* Item drop */
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #ac1e67;
 }
 
 ul.CTAs {

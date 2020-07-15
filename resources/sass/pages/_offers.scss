@@ -1,11 +1,8 @@
 #offers-page{
-	padding: 5vw;
-
-	h1{
-		font-size: 4rem;
-		font-weight: 700;
-	}
 	form{
+		@media (min-width: 768px){
+			padding: 0 20%;
+		}
 		.form-group{
 			label{
 

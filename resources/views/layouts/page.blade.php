@@ -16,6 +16,10 @@
                 <div class="row page-content">
                     @yield('content')
                 </div>
+                {{-- Footer --}}
+                <footer class="container-fluid">
+                    @include('includes.footer')
+                </footer>
             </div>
         </div>
     </section>

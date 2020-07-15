@@ -25,13 +25,20 @@ body {
   h1{
       font-size: 2rem;
       font-weight: 700;
+      margin-bottom: 1.5rem;    // mb-4
   }
   h2{
   	font-size: 1.3rem;
   	font-weight: 700;
-  	//margin-bottom: 20px;
+    margin-bottom: .5rem;  // mb-2
   }
 }
+.wrapper{
+    .content{
+        border-bottom: thin solid #c12168;
+    }
+}
+
 #welcome{
     .content{
         .restaurant-image{
@@ -53,6 +60,12 @@ body {
 #page-welcome {
     .page-content {
         min-height: 100vh;
+
+    }
+    @media (min-width: 768px) {
+        .reservations-form{
+            padding: 0 20%;
+        }
     }
 }
 
@@ -68,6 +81,18 @@ body {
     }
 }
 
+.topbar{
+    //background-color: #cef54b;
+    // background: rgb(206,245,75);
+    // background: linear-gradient(180deg, rgba(206,245,75,1) 0%, rgba(178,213,64,1) 100%);
+    background-color: #9fb5a5;
+    button{
+        color: white;
+        background-color: #ac1e67;
+        border: 0;
+    }
+    //border-bottom: thin solid black;
+}
 
 // Small
 @media (min-width: 0px) and (max-width: 767px) {

@@ -3,7 +3,7 @@
 @extends('layouts.landing-page')
 
 @section('title')
-    {{$settings['general']->site_title}} World's Greatest Burger in the History of Humanity
+    {{$settings['general']->site_title}}
 @endsection
 
 @section('carousel')
@@ -35,11 +35,13 @@
     <div class="col-12 restaurant-image p-0 d-none">
         <img src="img/top-down.jpg">
     </div>
-    <div class="col-12 mt-3">
-        <h2> Slick. And Classy. <br>That's how we <span> roll. </span> </h2>
+    <div class="col-12 mt-3 mt-4">
+        <h1> Slick. And Classy. <br>That's how we <span> roll. </span> </h1>
     </div>
     <div class="col-12 col-md-6">
-
+        <p>
+            With a long history and tradition {{$settings['general']->site_title}} is a Montreal classic.
+        </p>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
