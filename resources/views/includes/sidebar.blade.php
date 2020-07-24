@@ -6,7 +6,7 @@
 			</a>
 		</div>
 		<ul class="list-unstyled components">
-			<p class="site_title text-center mb-3 mt-1">{{$settings['general']->site_title}}</p>
+			<p class="site_title text-center mb-3 mt-1"> {{$settings['general']->site_title}}</p>
 			{{-- <li class="active"> --}}
 			<li class="mb-2">
 				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>

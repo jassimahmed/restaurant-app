@@ -3,6 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>@yield('title')</title>
+<link rel="icon" href="/img/floral_icon.ico">
 
 <!-- Bootstrap CSS CDN -->
 

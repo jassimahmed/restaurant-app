@@ -82,7 +82,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // View settings
-View::composer(['home', 'pages/about', 'pages/contact', 'pages/giftcards', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'menu/all-categories', 'menu/single-menu', 'layouts/landing-page'], function($view){
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/giftcards', 'pages/offers', 'pages/reservations', 'pages/thank-you', 'menu/all-categories', 'menu/single-menu', 'layouts/landing-page', 'layouts/admin', 'admin/login', 'auth/login'], function($view){
 	$gs = GeneralSetting::find(1);
 	$ss = SocialSetting::find(1);
 	$seos = SeoSetting::find(1);

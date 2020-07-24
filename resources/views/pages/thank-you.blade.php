@@ -1,17 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
 @section('title')
 Thank You - {{$settings['general']->site_title}}
 @endsection
 
 @section('content')
-	<div id="offers-page">
+	<div id="about-page" class="col-12">
 		<div class="content-box">
 			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<h1> Thank you.</h1>
+				<div class="col">
+					<h1>Thank You!</h1>
 					<p>
-						You will be first to recieve all new exciting offers.
+						You will recieve a confirmation email shortly! 
 					</p>
 				</div>
 			</div>

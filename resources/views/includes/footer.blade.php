@@ -71,10 +71,10 @@
 	</p>
 	<br>
 	<p>
-	Made using Laravel, Bootstrap, Fontawesome CDN. Royalty-free images from Pexels. Hosted on Heroku. For more information visit <a href="https://jassimahmed.com/" class="font-weight-bold" target="_blank" > Jassim Ahmed. </a></p>
+	Made using Laravel, Bootstrap, Fontawesome CDN. Royalty-free images from Pexels. Hosted on Heroku. Logo from <a href='https://pngtree.com/so/floral-alphabet'>pngtree.com</a>. For more information visit <a href="https://jassimahmed.com/" class="font-weight-bold" target="_blank" > Jassim Ahmed. </a></p>
 </div>
 
 {{-- Copyright info --}}
 <div class="row pt-4 pb-4">
-	<p class="copyright"> <img src="{{$settings['general']->logo_img_url}}"> Copyright © 2020 {{$settings['general']->site_title}}. </p>
+	<p class="copyright"> <a href="/"> <img src="{{$settings['general']->logo_img_url}}"> </a> Copyright © 2020 {{$settings['general']->site_title}}. </p>
 </div>

@@ -176,7 +176,7 @@ table {
 #single-menu-page h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: black;
 }
 
 #single-menu-page .item {
@@ -193,7 +193,7 @@ table {
 #single-menu-page .title h4,
 #single-menu-page .title .price {
   font-size: 1.5rem;
-  color: black;
+  color: #ac1e67;
   font-weight: 900;
 }
 
@@ -372,6 +372,10 @@ body h2 {
 
 .wrapper .content {
   border-bottom: thin solid #c12168;
+}
+
+.wrapper span {
+  color: green;
 }
 
 #welcome .content .restaurant-image {

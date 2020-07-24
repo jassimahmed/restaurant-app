@@ -18,7 +18,7 @@
 								<div class="item">
 									<div class="title">
 										<h4>{{$item->title}}</h4>
-										<span class="price">{{$item->price}}</span>
+										<span class="price">${{$item->price}}</span>
 									</div>
 									<div class="description">
 										<p>{{$item->description}}</p>
@@ -26,6 +26,11 @@
 								</div>
 							</div>
 						@endforeach
+						<div class="col-md-12">
+							<p class="font-italic">
+								*All prices are in Canadian Dollars. All the items and ingredients are generated automatically.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

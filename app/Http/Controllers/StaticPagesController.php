@@ -52,6 +52,7 @@ class StaticPagesController extends Controller
 		return redirect('/offers/thank-you');
 	}
 	public function registerreservation(){
+		//return request();
 		request()->validate([
 			'fname' => ['required', 'string', 'max:255'],
             'lname' => ['required', 'string', 'max:255'],
