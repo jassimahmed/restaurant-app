@@ -10,7 +10,7 @@ For the presentation, I wanted to provide an exiquisite and exclusive touch so t
 - Fully supports mobile, tablet and desktop screen sizes.
 - Backend interface for employees and admin.
 - Variable access for employees and admin.
-- Dynamic data loadding. 
+- Dynamic data loading. 
 
 ## Technology
 
@@ -25,6 +25,6 @@ Bootstrap is my favourite technology. It is something so simple, yet effective i
 
 ## Live website
 
-Check it out now! Please bear patience on the load time. I used Heroku for deployment. 
+I used Heroku for deployment. Check it out now! Please bear patience on the load time. 
 
 - [CLICK HERE](https://restaurant-jassim.herokuapp.com/)
